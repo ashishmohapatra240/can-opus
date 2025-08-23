@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,6 +11,11 @@ export default function Header() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+  const isAboutPage = pathname === '/about';
+  const isContactPage = pathname === '/contact';
 
   return (
     <header className="sticky top-0 w-full z-50 bg-white border-b border-gray-100 shadow-sm">
@@ -23,19 +29,19 @@ export default function Header() {
             <nav className="flex items-center space-x-6">
               <Link
                 href="/"
-                className="text-yellow-500 font-medium hover:text-yellow-600 transition-colors text-sm font-sans"
+                className={`text-gray-700 hover:text-yellow-600 transition-colors text-sm font-sans ${isHomePage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans"
+                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isAboutPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
               >
                 About Us
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans"
+                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isContactPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
               >
                 Contact
               </Link>
