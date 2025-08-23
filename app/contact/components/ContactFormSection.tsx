@@ -13,7 +13,7 @@ export default function ContactFormSection() {
         message: '',
         service: ''
     });
-    
+
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -41,7 +41,7 @@ export default function ContactFormSection() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        
+
         // Simulate form submission
         try {
             await new Promise(resolve => setTimeout(resolve, 2000));
@@ -74,14 +74,14 @@ export default function ContactFormSection() {
                                 Send Message
                             </span>
                         </div>
-                        
+
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight mb-6">
                             <span className="block">Ready to start</span>
                             <span className="block text-black/30">your project?</span>
                         </h2>
-                        
+
                         <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                            Tell us about your requirements and we'll get back to you with a customized solution. Our team of experts is ready to help you achieve your operational goals.
+                            Tell us about your requirements and we&apos;ll get back to you with a customized solution. Our team of experts is ready to help you achieve your operational goals.
                         </p>
 
                         {/* Success/Error Messages */}
@@ -91,7 +91,7 @@ export default function ContactFormSection() {
                                     <RiCheckLine className="w-6 h-6 text-green-600 mr-3" />
                                     <div>
                                         <h3 className="text-green-800 font-semibold">Message Sent Successfully!</h3>
-                                        <p className="text-green-700">We'll get back to you within 24 hours.</p>
+                                        <p className="text-green-700">We&apos;ll get back to you within 24 hours.</p>
                                     </div>
                                 </div>
                             </div>
