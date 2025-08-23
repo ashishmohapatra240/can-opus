@@ -34,16 +34,10 @@ export default function Header() {
                 About Us
               </Link>
               <Link
-                href="/services"
+                href="/contact"
                 className="text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans"
               >
-                Services
-              </Link>
-              <Link
-                href="/process"
-                className="text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans"
-              >
-                Process
+                Contact
               </Link>
             </nav>
           </div>
@@ -57,7 +51,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
-            <button 
+            <button
               onClick={toggleMobileMenu}
               className="text-gray-700 hover:text-yellow-500 focus:outline-none transition-colors"
               aria-label="Toggle mobile menu"
@@ -107,10 +101,17 @@ export default function Header() {
               >
                 Process
               </Link>
-              
+              <Link
+                href="/contact"
+                className="block px-3 py-2 text-gray-700 hover:text-yellow-500 transition-colors text-base font-sans"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+
               {/* Mobile CTA Button */}
               <div className="px-3 py-3">
-                <button 
+                <button
                   className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 py-3 rounded-full transition-colors text-base font-sans"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
