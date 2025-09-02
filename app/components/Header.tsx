@@ -15,10 +15,11 @@ export default function Header() {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
   const isAboutPage = pathname === '/about';
+  const isProductsPage = pathname === '/products';
   const isContactPage = pathname === '/contact';
 
   return (
-    <header className="sticky top-0 w-full z-50 bg-white border-b border-gray-100 shadow-sm">
+    <header className="sticky top-0 w-full z-50 bg-white border-b border-gray-100 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-14 lg:h-16">
           {/* Logo */}
@@ -38,6 +39,12 @@ export default function Header() {
                 className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isAboutPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
               >
                 About Us
+              </Link>
+              <Link
+                href="/products"
+                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isProductsPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
+              >
+                Products
               </Link>
               <Link
                 href="/contact"
@@ -92,6 +99,13 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About Us
+              </Link>
+              <Link
+                href="/products"
+                className="block px-3 py-2 text-gray-700 hover:text-yellow-500 transition-colors text-base font-sans"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Products
               </Link>
               <Link
                 href="/services"
