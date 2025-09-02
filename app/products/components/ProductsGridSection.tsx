@@ -1,7 +1,6 @@
-import Link from 'next/link';
-import ProductCard from './ProductCard';
+import ProductCard from '../../components/ProductCard';
 
-export default function ProductsSection() {
+export default function ProductsGridSection() {
     const products = [
         {
             id: 1,
@@ -60,7 +59,7 @@ export default function ProductsSection() {
     ];
 
     return (
-        <section className="py-16 lg:py-24 bg-gray-50">
+        <section className="py-16 lg:py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Our Products Badge */}
                 <div className="flex mb-8">
@@ -78,7 +77,7 @@ export default function ProductsSection() {
                 </div>
 
                 {/* Products Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
                     {products.map((product) => (
                         <ProductCard
                             key={product.id}
@@ -87,13 +86,6 @@ export default function ProductsSection() {
                             description={product.description}
                         />
                     ))}
-                </div>
-
-                {/* View All Products Button */}
-                <div className="flex justify-center">
-                    <Link href="/products" className="inline-flex items-center px-8 py-4 rounded-full text-md font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition-colors duration-300 cursor-pointer">
-                        View All Products
-                    </Link>
                 </div>
             </div>
         </section>
