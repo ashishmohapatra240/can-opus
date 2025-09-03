@@ -16,6 +16,8 @@ export default function Header() {
   const isHomePage = pathname === '/';
   const isAboutPage = pathname === '/about';
   const isProductsPage = pathname === '/products';
+  const isCareersPage = pathname === '/careers';
+  const isEventsPage = pathname === '/events';
   const isContactPage = pathname === '/contact';
 
   return (
@@ -45,6 +47,18 @@ export default function Header() {
                 className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isProductsPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
               >
                 Products
+              </Link>
+              <Link
+                href="/careers"
+                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isCareersPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
+              >
+                Careers
+              </Link>
+              <Link
+                href="/events"
+                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isEventsPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
+              >
+                Events
               </Link>
               <Link
                 href="/contact"
@@ -108,18 +122,18 @@ export default function Header() {
                 Products
               </Link>
               <Link
-                href="/services"
+                href="/careers"
                 className="block px-3 py-2 text-gray-700 hover:text-yellow-500 transition-colors text-base font-sans"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Services
+                Careers
               </Link>
               <Link
-                href="/process"
+                href="/events"
                 className="block px-3 py-2 text-gray-700 hover:text-yellow-500 transition-colors text-base font-sans"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Process
+                Events
               </Link>
               <Link
                 href="/contact"
