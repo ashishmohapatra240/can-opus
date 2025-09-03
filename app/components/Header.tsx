@@ -24,10 +24,8 @@ export default function Header() {
     <header className="sticky top-0 w-full z-50 bg-white border-b border-gray-100 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-14 lg:h-16">
-          {/* Logo */}
           <Image src="/images/canopus-logo.svg" alt="Canopus Logo" width={100} height={100} />
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <nav className="flex items-center space-x-6">
               <Link
@@ -61,6 +59,12 @@ export default function Header() {
                 Events
               </Link>
               <Link
+                href="/partnering"
+                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isEventsPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
+              >
+                Partnering
+              </Link>
+              <Link
                 href="/contact"
                 className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isContactPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
               >
@@ -69,14 +73,12 @@ export default function Header() {
             </nav>
           </div>
 
-          {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center">
             <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 py-2 rounded-full transition-colors text-sm font-sans">
               Let&apos;s Connect
             </button>
           </div>
 
-          {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
               onClick={toggleMobileMenu}
@@ -96,7 +98,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-100">
@@ -134,6 +135,13 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Events
+              </Link>
+              <Link
+                href="/partnering"
+                className="block px-3 py-2 text-gray-700 hover:text-yellow-500 transition-colors text-base font-sans"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                partnering
               </Link>
               <Link
                 href="/contact"
