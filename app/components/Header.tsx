@@ -25,7 +25,8 @@ export default function Header() {
     <header className="sticky top-0 w-full z-50 bg-white border-b border-gray-100 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-14 lg:h-16">
-          <Image src="/images/canopus-logo.svg" alt="Canopus Logo" width={100} height={100} />
+          <Link href="/" className='cursor-pointer'>          <Image src="/images/canopus-logo.svg" alt="Canopus Logo" width={100} height={100} />
+          </Link>
 
           <div className="hidden lg:flex items-center space-x-8">
             <nav className="flex items-center space-x-6">

@@ -33,25 +33,6 @@ export default function CompanyOverviewSection() {
                     </p>
                 </div>
 
-                {/* Statistics Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16">
-                    <div className="text-center">
-                        <div className="text-4xl lg:text-5xl font-bold text-yellow-500 mb-2">20+</div>
-                        <p className="text-gray-600 font-medium">Years of Excellence</p>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-4xl lg:text-5xl font-bold text-yellow-500 mb-2">500+</div>
-                        <p className="text-gray-600 font-medium">Projects Completed</p>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-4xl lg:text-5xl font-bold text-yellow-500 mb-2">50+</div>
-                        <p className="text-gray-600 font-medium">Industry Partners</p>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-4xl lg:text-5xl font-bold text-yellow-500 mb-2">99%</div>
-                        <p className="text-gray-600 font-medium">Client Satisfaction</p>
-                    </div>
-                </div>
 
                 {/* Feature Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
