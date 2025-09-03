@@ -18,6 +18,7 @@ export default function Header() {
   const isProductsPage = pathname === '/products';
   const isCareersPage = pathname === '/careers';
   const isEventsPage = pathname === '/events';
+  const isPartneringPage = pathname === '/partnering';
   const isContactPage = pathname === '/contact';
 
   return (
@@ -60,7 +61,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/partnering"
-                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isEventsPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
+                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isPartneringPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
               >
                 Partnering
               </Link>
@@ -141,7 +142,7 @@ export default function Header() {
                 className="block px-3 py-2 text-gray-700 hover:text-yellow-500 transition-colors text-base font-sans"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                partnering
+                Partnering
               </Link>
               <Link
                 href="/contact"
