@@ -239,7 +239,7 @@ export default function HeroSection() {
 
             {/* CTA Button */}
             <div className="flex items-center">
-              <button className="group bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 flex items-center space-x-2 text-sm lg:text-base font-sans">
+              <button className="group bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 flex items-center space-x-2 text-sm lg:text-base font-sans cursor-pointer">
                 <span>Get in touch</span>
                 <svg
                   className="w-4 h-4 lg:w-5 lg:h-5 transform group-hover:translate-x-2 transition-transform duration-300"
