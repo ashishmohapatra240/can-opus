@@ -17,7 +17,7 @@ export default function Footer() {
         name: "Industrial Dust, Fume & Mist",
         href: "#",
       },
-      { name: "Emission Monitoring", href: "#" },
+      // { name: "Emission Monitoring", href: "#" },
       {
         name: "Power Transmission Technology",
         href: "#",
@@ -33,7 +33,7 @@ export default function Footer() {
       { name: "Flow & Level Instrument", href: "#" },
       { name: "Condition Monitoring Equipment", href: "#" },
       { name: "Screw Pumps", href: "#" },
-      { name: "Microbial Filtration", href: "#" },
+      // { name: "Microbial Filtration", href: "#" },
     ],
   };
 

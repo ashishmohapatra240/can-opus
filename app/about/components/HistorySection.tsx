@@ -21,7 +21,7 @@ export default function HistorySection() {
         {
             year: "2016",
             title: "Environmental Focus",
-            description: "Launched dedicated environmental solutions division focusing on emission monitoring and control.",
+            description: "Launched dedicated environmental solutions division.",
             highlight: false
         },
         {

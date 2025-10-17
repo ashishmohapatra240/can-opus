@@ -5,8 +5,8 @@ import ProductsCTASection from './components/ProductsCTASection';
 
 export const metadata: Metadata = {
     title: 'Products - Canopus | Industrial Engineering Solutions',
-    description: 'Explore our comprehensive range of industrial products including dust collection systems, emission monitoring, power transmission technology, and more. Quality engineering solutions for every industry.',
-    keywords: 'industrial products, dust collection, emission monitoring, power transmission, gas turbine filtration, screw pumps, flow meters, condition monitoring',
+    description: 'Explore our comprehensive range of industrial products including dust collection systems, power transmission technology, and more. Quality engineering solutions for every industry.',
+    keywords: 'industrial products, dust collection, power transmission, gas turbine filtration, screw pumps, flow meters, condition monitoring',
 };
 
 export default function ProductsPage() {

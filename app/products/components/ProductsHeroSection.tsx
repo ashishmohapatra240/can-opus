@@ -17,7 +17,7 @@ export default function ProductsHeroSection() {
                     {/* Description */}
                     <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
                         Discover our comprehensive range of industrial equipment and solutions. 
-                        From dust collection systems to emission monitoring, we provide cutting-edge 
+                        From dust collection systems to power transmission technology, we provide cutting-edge 
                         technology that drives efficiency and excellence across industries.
                     </p>
                 </div>

@@ -29,7 +29,7 @@ export default function CompanyOverviewSection() {
                         As a chosen partner of our valued clients, we embrace the latest technology in the market that improves the efficiency and performance of machines across various industries including power, steel, fertilizer, and paper manufacturing.
                     </p>
                     <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
-                        Our expertise spans condition-based machinery monitoring, filtration systems, emission monitoring, and power transmission technologies, ensuring our clients achieve sustainable operational excellence.
+                        Our expertise spans condition-based machinery monitoring, filtration systems, and power transmission technologies, ensuring our clients achieve sustainable operational excellence.
                     </p>
                 </div>
 

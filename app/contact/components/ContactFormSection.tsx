@@ -19,12 +19,12 @@ export default function ContactFormSection() {
 
     const services = [
         'Condition Monitoring Equipment',
-        'Emission Monitoring',
+        // 'Emission Monitoring',
         'Flow & Level Instruments',
         'Gas Phase Filtration',
         'Gas Turbine Filtration',
         'Industrial Dust, Fume and Mist',
-        'Microbial Filtration',
+        // 'Microbial Filtration',
         'Power Transmission Technology',
         'Screw Pumps',
         'Other'
