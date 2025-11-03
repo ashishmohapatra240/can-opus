@@ -29,7 +29,7 @@ export default function ProgrammeAgendaFlowchart() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Programme Agenda
           </h2>
-          <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-primary/80 mx-auto"></div>
         </div>
 
         {/* Simple Flowchart */}

@@ -52,7 +52,7 @@ export default function PhotoGallerySection() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Capturing moments from our SakkSham leadership program - where passion meets purpose
           </p>
-          <div className="w-24 h-1 bg-yellow-500 mx-auto mt-6"></div>
+          <div className="w-24 h-1 bg-primary/80 mx-auto mt-6"></div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
