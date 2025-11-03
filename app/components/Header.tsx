@@ -32,43 +32,43 @@ export default function Header() {
             <nav className="flex items-center space-x-6">
               <Link
                 href="/"
-                className={`text-gray-700 hover:text-yellow-600 transition-colors text-sm font-sans ${isHomePage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
+                className={`text-gray-700 hover:text-yellow-600 transition-colors text-sm font-sans ${isHomePage ? 'text-primary/80 font-bold' : 'text-gray-700 hover:text-primary/80'}`}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isAboutPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
+                className={`text-gray-700 hover:text-primary/80 transition-colors text-sm font-sans ${isAboutPage ? 'text-primary/80 font-bold' : 'text-gray-700 hover:text-primary/80'}`}
               >
                 About Us
               </Link>
               <Link
                 href="/products"
-                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isProductsPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
+                className={`text-gray-700 hover:text-primary/80 transition-colors text-sm font-sans ${isProductsPage ? 'text-primary/80 font-bold' : 'text-gray-700 hover:text-primary/80'}`}
               >
                 Products
               </Link>
               <Link
                 href="/careers"
-                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isCareersPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
+                className={`text-gray-700 hover:text-primary/80 transition-colors text-sm font-sans ${isCareersPage ? 'text-primary/80 font-bold' : 'text-gray-700 hover:text-primary/80'}`}
               >
                 Careers
               </Link>
               <Link
                 href="/events"
-                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isEventsPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
+                className={`text-gray-700 hover:text-primary/80 transition-colors text-sm font-sans ${isEventsPage ? 'text-primary/80 font-bold' : 'text-gray-700 hover:text-primary/80'}`}
               >
                 Events
               </Link>
               <Link
                 href="/partnering"
-                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isPartneringPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
+                className={`text-gray-700 hover:text-primary/80 transition-colors text-sm font-sans ${isPartneringPage ? 'text-primary/80 font-bold' : 'text-gray-700 hover:text-primary/80'}`}
               >
                 Partnering
               </Link>
               <Link
                 href="/contact"
-                className={`text-gray-700 hover:text-yellow-500 transition-colors text-sm font-sans ${isContactPage ? 'text-yellow-500 font-bold' : 'text-gray-700 hover:text-yellow-500'}`}
+                className={`text-gray-700 hover:text-primary/80 transition-colors text-sm font-sans ${isContactPage ? 'text-primary/80 font-bold' : 'text-gray-700 hover:text-primary/80'}`}
               >
                 Contact
               </Link>
@@ -76,7 +76,7 @@ export default function Header() {
           </div>
 
           <div className="hidden lg:flex items-center">
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 py-2 rounded-full transition-colors text-sm font-sans cursor-pointer">
+            <button className="bg-primary hover:bg-primary/80 text-white font-semibold px-4 py-2 rounded-full transition-colors text-sm font-sans cursor-pointer">
               Let&apos;s Connect
             </button>
           </div>
@@ -84,7 +84,7 @@ export default function Header() {
           <div className="lg:hidden">
             <button
               onClick={toggleMobileMenu}
-              className="text-gray-700 hover:text-yellow-500 focus:outline-none transition-colors"
+              className="text-gray-700 hover:text-primary/80 focus:outline-none transition-colors"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? (
@@ -105,49 +105,49 @@ export default function Header() {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-100">
               <Link
                 href="/"
-                className="block px-3 py-2 text-yellow-500 font-medium hover:text-yellow-600 transition-colors text-base font-sans"
+                className="block px-3 py-2 text-primary/80 font-medium hover:text-yellow-600 transition-colors text-base font-sans"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="block px-3 py-2 text-gray-700 hover:text-yellow-500 transition-colors text-base font-sans"
+                className="block px-3 py-2 text-gray-700 hover:text-primary/80 transition-colors text-base font-sans"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About Us
               </Link>
               <Link
                 href="/products"
-                className="block px-3 py-2 text-gray-700 hover:text-yellow-500 transition-colors text-base font-sans"
+                className="block px-3 py-2 text-gray-700 hover:text-primary/80 transition-colors text-base font-sans"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Products
               </Link>
               <Link
                 href="/careers"
-                className="block px-3 py-2 text-gray-700 hover:text-yellow-500 transition-colors text-base font-sans"
+                className="block px-3 py-2 text-gray-700 hover:text-primary/80 transition-colors text-base font-sans"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Careers
               </Link>
               <Link
                 href="/events"
-                className="block px-3 py-2 text-gray-700 hover:text-yellow-500 transition-colors text-base font-sans"
+                className="block px-3 py-2 text-gray-700 hover:text-primary/80 transition-colors text-base font-sans"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Events
               </Link>
               <Link
                 href="/partnering"
-                className="block px-3 py-2 text-gray-700 hover:text-yellow-500 transition-colors text-base font-sans"
+                className="block px-3 py-2 text-gray-700 hover:text-primary/80 transition-colors text-base font-sans"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Partnering
               </Link>
               <Link
                 href="/contact"
-                className="block px-3 py-2 text-gray-700 hover:text-yellow-500 transition-colors text-base font-sans"
+                className="block px-3 py-2 text-gray-700 hover:text-primary/80 transition-colors text-base font-sans"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
@@ -156,7 +156,7 @@ export default function Header() {
               {/* Mobile CTA Button */}
               <div className="px-3 py-3">
                 <button
-                  className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 py-3 rounded-full transition-colors text-base font-sans"
+                  className="w-full bg-primary hover:bg-primary/80 text-white font-semibold px-4 py-3 rounded-full transition-colors text-base font-sans"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Let&apos;s Connect

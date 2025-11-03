@@ -214,7 +214,7 @@ export default function HeroSection() {
         </div>
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-secondary"></div>
       </div>
 
       {/* Content */}
@@ -225,21 +225,22 @@ export default function HeroSection() {
             <h1 className="text-white font-semibold leading-none mb-4 lg:mb-6 font-sans">
               <div className="text-4xl md:text-7xl tracking-tight">
                 <span className="block">
-                  Building <span className="text-yellow-400">future</span> with Innovative  solutions
+                  Building future with Innovative  solutions
                 </span>
 
 
               </div>
+              
             </h1>
 
             {/* Subtitle */}
-            <p className="text-gray-300 text-base leading-relaxed mb-6 lg:mb-8 max-w-2xl font-sans">
+            <p className="text-white/80 text-base leading-relaxed mb-6 lg:mb-8 max-w-2xl font-sans">
               Our expertise is on the condition-based machinery that results in improved operational efficiency, low maintenance cost, and cost savings
             </p>
 
             {/* CTA Button */}
             <div className="flex items-center">
-              <button className="group bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 flex items-center space-x-2 text-sm lg:text-base font-sans cursor-pointer">
+              <button className="group bg-primary hover:bg-primary/80 text-white font-semibold px-4 py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 flex items-center space-x-2 text-sm lg:text-base font-sans cursor-pointer">
                 <span>Get in touch</span>
                 <svg
                   className="w-4 h-4 lg:w-5 lg:h-5 transform group-hover:translate-x-2 transition-transform duration-300"
