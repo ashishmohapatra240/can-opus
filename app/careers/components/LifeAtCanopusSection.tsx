@@ -33,12 +33,12 @@ export default function LifeAtCanopusSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <div className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black mb-8">
+                    <div className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white mb-8">
                         Our Culture
                     </div>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight mb-6">
                         <span className="block">Life at</span>
-                        <span className="block text-black/30">CanOpus</span>
+                        <span className="block text-secondary">CanOpus</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Experience a vibrant workplace where innovation meets collaboration.

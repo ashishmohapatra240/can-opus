@@ -46,12 +46,12 @@ export default function ResumeSubmissionSection() {
         <section id="apply" className="py-16 lg:py-24 bg-white">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
-                    <div className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black mb-8">
+                    <div className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white mb-8">
                         Join Our Team
                     </div>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight mb-6">
                         <span className="block">Submit Your</span>
-                        <span className="block text-black/30">Resume</span>
+                        <span className="block text-secondary">Resume</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
                         Take the first step towards joining our innovative team.
@@ -73,7 +73,7 @@ export default function ResumeSubmissionSection() {
                                     required
                                     value={formData.fullName}
                                     onChange={handleInputChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-colors"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/80 focus:border-transparent outline-none transition-colors"
                                     placeholder="Enter your full name"
                                 />
                             </div>
@@ -88,7 +88,7 @@ export default function ResumeSubmissionSection() {
                                     required
                                     value={formData.email}
                                     onChange={handleInputChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-colors"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/80 focus:border-transparent outline-none transition-colors"
                                     placeholder="Enter your email address"
                                 />
                             </div>
@@ -106,7 +106,7 @@ export default function ResumeSubmissionSection() {
                                     required
                                     value={formData.phone}
                                     onChange={handleInputChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-colors"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/80 focus:border-transparent outline-none transition-colors"
                                     placeholder="Enter your phone number"
                                 />
                             </div>
@@ -121,7 +121,7 @@ export default function ResumeSubmissionSection() {
                                     required
                                     value={formData.currentLocation}
                                     onChange={handleInputChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-colors"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/80 focus:border-transparent outline-none transition-colors"
                                     placeholder="Enter your current location"
                                 />
                             </div>
@@ -139,7 +139,7 @@ export default function ResumeSubmissionSection() {
                                     required
                                     value={formData.position}
                                     onChange={handleInputChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-colors"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/80 focus:border-transparent outline-none transition-colors"
                                 >
                                     <option value="">Select a position</option>
                                     {positions.map((pos) => (
@@ -157,7 +157,7 @@ export default function ResumeSubmissionSection() {
                                     required
                                     value={formData.experience}
                                     onChange={handleInputChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-colors"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/80 focus:border-transparent outline-none transition-colors"
                                 >
                                     <option value="">Select experience</option>
                                     <option value="0-1">0-1 years</option>
@@ -182,7 +182,7 @@ export default function ResumeSubmissionSection() {
                                     required
                                     accept=".pdf,.doc,.docx"
                                     onChange={handleFileChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-colors file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-yellow-50 file:text-yellow-700 hover:file:bg-yellow-100"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/80 focus:border-transparent outline-none transition-colors file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-yellow-50 file:text-yellow-700 hover:file:bg-yellow-100"
                                 />
                             </div>
                             <p className="text-sm text-gray-500 mt-1">
@@ -201,7 +201,7 @@ export default function ResumeSubmissionSection() {
                                 rows={4}
                                 value={formData.coverLetter}
                                 onChange={handleInputChange}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-colors resize-none"
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/80 focus:border-transparent outline-none transition-colors resize-none"
                                 placeholder="Tell us why you're interested in this position and what makes you a great fit..."
                             />
                         </div>
@@ -210,7 +210,7 @@ export default function ResumeSubmissionSection() {
                         <div className="pt-6">
                             <button
                                 type="submit"
-                                className="w-full md:w-auto px-8 py-4 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500 transition-colors"
+                                className="w-full md:w-auto px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/80 transition-colors"
                             >
                                 Submit Application
                             </button>

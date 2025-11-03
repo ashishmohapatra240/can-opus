@@ -46,12 +46,12 @@ export default function OpenPositionsSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <div className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black mb-8">
+                    <div className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white mb-8">
                         Current Openings
                     </div>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight mb-6">
                         <span className="block">Open</span>
-                        <span className="block text-black/30">Positions</span>
+                        <span className="block text-secondary">Positions</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Join our growing team and be part of innovative engineering solutions that make a difference.
@@ -104,7 +104,7 @@ export default function OpenPositionsSection() {
                                             <ul className="space-y-2">
                                                 {position.requirements.map((req, index) => (
                                                     <li key={index} className="flex items-start space-x-2">
-                                                        <div className="flex-shrink-0 w-2 h-2 bg-yellow-400 rounded-full mt-2"></div>
+                                                        <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
                                                         <span className="text-gray-600">{req}</span>
                                                     </li>
                                                 ))}
@@ -112,7 +112,7 @@ export default function OpenPositionsSection() {
                                         </div>
                                     </div>
                                     <div className="mt-6 pt-6 border-t border-gray-200">
-                                        <a href="#apply" className="inline-flex items-center px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500 transition-colors">
+                                        <a href="#apply" className="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/80 transition-colors">
                                             Apply for this position
                                             <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

@@ -4,14 +4,14 @@ export default function CareersHeroSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center">
                     {/* Badge */}
-                    <div className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black mb-8">
+                    <div className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white mb-8">
                         Join Our Team
                     </div>
                     
                     {/* Main Heading */}
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-black leading-tight mb-6">
                         <span className="block">Build Your Career</span>
-                        <span className="block text-black/30">with CanOpus</span>
+                        <span className="block text-secondary">with CanOpus</span>
                     </h1>
                     
                     {/* Description */}
@@ -23,7 +23,7 @@ export default function CareersHeroSection() {
                     
                     {/* CTA Button */}
                     <div className="flex justify-center">
-                        <a href="#open-positions" className="px-8 py-4 bg-black text-white font-semibold rounded-full hover:bg-gray-900 transition-colors cursor-pointer">
+                        <a href="#open-positions" className="px-8 py-4 bg-primary hover:bg-primary/80 text-white font-semibold rounded-full transition-colors cursor-pointer">
                             View Open Positions
                         </a>
                     </div>

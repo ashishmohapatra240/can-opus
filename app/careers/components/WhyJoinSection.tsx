@@ -31,7 +31,7 @@ export default function WhyJoinSection() {
             
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
                         <span className="block">Why Join</span>
-                        <span className="block text-black/30">CanOpus?</span>
+                        <span className="block text-secondary">CanOpus?</span>
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Our portfolio of products and solutions are focused at improving the operational 
