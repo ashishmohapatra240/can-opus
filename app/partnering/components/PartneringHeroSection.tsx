@@ -5,7 +5,7 @@ export default function PartneringHeroSection() {
                 <div className="text-center max-w-4xl mx-auto">
                     {/* Partnering Badge */}
                     <div className="flex justify-center mb-8">
-                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black">
+                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white">
                             Strategic Partnerships
                         </span>
                     </div>
@@ -13,7 +13,7 @@ export default function PartneringHeroSection() {
                     {/* Main Heading */}
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-black leading-tight mb-6">
                         <span className="block">Building Value-Based</span>
-                        <span className="block text-black/30">Relationships</span>
+                        <span className="block text-secondary">Relationships</span>
                     </h1>
 
                     {/* Subtitle */}
