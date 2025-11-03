@@ -36,14 +36,14 @@ export default function ServicesSection() {
     ];
 
     return (
-        <section className="py-16 lg:py-24 bg-black rounded-4xl mx-4 sm:mx-6 lg:mx-8 my-8 lg:my-12">
+        <section className="py-16 lg:py-24 bg-primary rounded-4xl mx-4 sm:mx-6 lg:mx-8 my-8 lg:my-12">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20">
                     {/* Left Side - Content */}
                     <div className="lg:pr-8">
                         {/* Our Services Badge */}
                         <div className="flex mb-8">
-                            <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black">
+                            <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-white/20 text-white">
                                 Our Services
                             </span>
                         </div>

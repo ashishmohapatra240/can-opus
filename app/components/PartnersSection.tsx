@@ -3,7 +3,7 @@ import Marquee from 'react-fast-marquee';
 
 export default function PartnersSection() {
     // Generate array of partner image paths
-    const partnerImages = Array.from({ length: 14 }, (_, i) => `/images/partners/image ${i + 1}.png`);
+    const partnerImages = Array.from({ length: 18 }, (_, i) => `/images/partners/image ${i + 1}.png`);
 
     return (
         <section className="py-8 lg:py-12 border-b-gray-200 border-b bg-white overflow-hidden">
@@ -22,7 +22,7 @@ export default function PartnersSection() {
 
                         {/* Decorative line */}
                         <div className="mt-6 flex justify-center lg:justify-start">
-                            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full"></div>
+                            <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/80 rounded-full"></div>
                         </div>
                     </div>
 

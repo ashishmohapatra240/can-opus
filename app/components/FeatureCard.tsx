@@ -10,7 +10,7 @@ export default function FeatureCard({ icon, title, description }: FeatureCardPro
     return (
         <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-sm transition-shadow duration-300 text-center">
             <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gray-100 rounded-2xl flex items-center justify-center">
+                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-primary/10 rounded-2xl flex items-center justify-center">
                     {icon}
                 </div>
             </div>

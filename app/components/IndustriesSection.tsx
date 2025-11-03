@@ -35,7 +35,7 @@ export default function IndustriesSection() {
                 <div className="mb-12 lg:mb-16">
                     {/* Industries Badge */}
                     <div className="flex mb-8">
-                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black">
+                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white">
                             Industries
                         </span>
                     </div>
@@ -44,7 +44,7 @@ export default function IndustriesSection() {
                     <div className="mb-5">
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black leading-tight">
                             <span className="block">Unlocking the different industries with</span>
-                            <span className="block text-black/30">absolute ease</span>
+                            <span className="block text-secondary">absolute ease</span>
                         </h2>
                     </div>
                 </div>

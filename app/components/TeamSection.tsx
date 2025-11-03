@@ -35,7 +35,7 @@ export default function TeamSection() {
                 <div className="text-center mb-12 lg:mb-16">
                     {/* Our Services Badge */}
                     <div className="flex justify-center mb-8">
-                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black">
+                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white">
                             Our Services
                         </span>
                     </div>

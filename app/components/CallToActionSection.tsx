@@ -22,7 +22,7 @@ export default function CallToActionSection() {
 
                 {/* Call-to-Action Button */}
                 <div className="flex justify-center">
-                    <button className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition-colors duration-300 cursor-pointer">
+                    <button className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold bg-primary text-white hover:bg-primary/80 transition-colors duration-300 cursor-pointer">
                         Join Us
                     </button>
                 </div>

@@ -30,7 +30,7 @@ export default function ProductSlider({ products }: ProductSliderProps) {
                     renderBullet: (index: number, className: string) => {
                         return `<span class="${className} w-3 h-3 bg-gray-300 rounded-full cursor-pointer transition-all duration-300 inline-block"></span>`;
                     },
-                    bulletActiveClass: '!w-8 !bg-yellow-400 !rounded-md',
+                    bulletActiveClass: '!w-8 !bg-primary !rounded-md',
                 }}
                 autoplay={{
                     delay: 5000,
@@ -65,7 +65,7 @@ export default function ProductSlider({ products }: ProductSliderProps) {
             </Swiper>
 
             <button
-                className="swiper-button-prev-custom disabled:opacity-35 disabled:cursor-not-allowed absolute top-1/2 -left-4 lg:-left-12 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-yellow-400 hover:bg-yellow-500 text-black flex items-center justify-center transition-all duration-300 shadow-lg group cursor-pointer"
+                className="swiper-button-prev-custom disabled:opacity-35 disabled:cursor-not-allowed absolute top-1/2 -left-4 lg:-left-12 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-primary hover:bg-primary/80 text-black flex items-center justify-center transition-all duration-300 shadow-lg group cursor-pointer"
                 aria-label="Previous slide"
             >
                 <svg 
@@ -78,7 +78,7 @@ export default function ProductSlider({ products }: ProductSliderProps) {
                 </svg>
             </button>
             <button
-                className="swiper-button-next-custom disabled:opacity-35 disabled:cursor-not-allowed absolute top-1/2 -right-4 lg:-right-12 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-yellow-400 hover:bg-yellow-500 text-black flex items-center justify-center transition-all duration-300 shadow-lg group cursor-pointer"
+                className="swiper-button-next-custom disabled:opacity-35 disabled:cursor-not-allowed absolute top-1/2 -right-4 lg:-right-12 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-primary hover:bg-primary/80 text-black flex items-center justify-center transition-all duration-300 shadow-lg group cursor-pointer"
                 aria-label="Next slide"
             >
                 <svg 

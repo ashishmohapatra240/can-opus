@@ -7,7 +7,7 @@ export default function AboutSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* About Us Badge */}
                 <div className="flex mb-8">
-                    <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black">
+                    <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white">
                         About Us
                     </span>
                 </div>
@@ -16,7 +16,7 @@ export default function AboutSection() {
                 <div className="mb-5">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black leading-tight">
                         <span className="block">Trusted partner for over 20 years</span>
-                        <span className="block text-black/30">of industry excellence</span>
+                        <span className="block text-secondary">of industry excellence</span>
                     </h2>
                 </div>
 
@@ -33,19 +33,19 @@ export default function AboutSection() {
                 {/* Feature Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                     <FeatureCard
-                        icon={<RiRocketLine className="w-8 h-8 lg:w-10 lg:h-10 text-gray-700" />}
+                        icon={<RiRocketLine className="w-8 h-8 lg:w-10 lg:h-10 text-primary" />}
                         title="High-Quality Products & Services"
                         description="We are a partner of choice for our valued clients because of our superior quality products and solutions."
                     />
                     
                     <FeatureCard
-                        icon={<RiCustomerServiceLine className="w-8 h-8 lg:w-10 lg:h-10 text-gray-700" />}
+                        icon={<RiCustomerServiceLine className="w-8 h-8 lg:w-10 lg:h-10 text-primary" />}
                         title="Customer-Centric Results"
                         description="Our result-oriented products and solutions are centered around the unique requirement of our clients."
                     />
                     
                     <FeatureCard
-                        icon={<RiCodeSSlashLine className="w-8 h-8 lg:w-10 lg:h-10 text-gray-700" />}
+                        icon={<RiCodeSSlashLine className="w-8 h-8 lg:w-10 lg:h-10 text-primary" />}
                         title="Technology Focused Solutions"
                         description="We embrace the latest technology that improves the efficiency and performance of the machinery and industry line."
                     />
