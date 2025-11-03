@@ -2,13 +2,13 @@ export default function ProductsCTASection() {
     return (
         <section className="relative py-20 lg:py-28 bg-gray-50 overflow-hidden">
             {/* Background Elements */}
-            <div className="absolute top-0 left-0 w-full h-2 bg-yellow-400"></div>
+            <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
             
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Left Side - Content */}
                     <div>
-                        <div className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black mb-6">
+                        <div className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white mb-6">
                             Custom Solutions
                         </div>
                         
@@ -60,7 +60,7 @@ export default function ProductsCTASection() {
                         
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="px-8 py-4 bg-yellow-400 text-black font-semibold rounded-xl hover:bg-yellow-500 transition-colors cursor-pointer">
+                            <button className="px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/80 transition-colors cursor-pointer">
                                 Start Your Project
                             </button>
                             <button className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl border-2 border-gray-200 hover:border-gray-300 transition-all cursor-pointer">

@@ -87,7 +87,7 @@ export default async function ProductDetailPage({
                                     <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
                                         {group.sectionTitle}
                                     </h2>
-                                    <div className="w-24 h-1 bg-yellow-400 mx-auto"></div>
+                                    <div className="w-24 h-1 bg-primary mx-auto"></div>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                     {group.variants.map((variant, index) => (
@@ -117,7 +117,7 @@ export default async function ProductDetailPage({
                         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition-colors duration-300 gap-2"
+                                className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold bg-primary text-white hover:bg-primary/80 transition-colors duration-300 gap-2"
                             >
                                 <FaEnvelope className="text-lg" />
                                 Enquire Now
@@ -162,7 +162,7 @@ export default async function ProductDetailPage({
                         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition-colors duration-300 gap-2"
+                                className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold bg-primary text-white hover:bg-primary/80 transition-colors duration-300 gap-2"
                             >
                                 <FaEnvelope className="text-lg" />
                                 Enquire Now
@@ -206,12 +206,12 @@ export default async function ProductDetailPage({
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4">
                             Why Choose CanOpus
                         </h2>
-                        <div className="w-24 h-1 bg-yellow-400 mx-auto"></div>
+                        <div className="w-24 h-1 bg-primary mx-auto"></div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div className="bg-white rounded-2xl p-8 text-center border border-gray-200 hover:shadow-lg transition-all duration-300 group">
-                            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-yellow-400 text-black mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                                 <FaTools className="text-3xl" />
                             </div>
                             <h3 className="text-xl font-bold text-black mb-4">
@@ -223,7 +223,7 @@ export default async function ProductDetailPage({
                         </div>
 
                         <div className="bg-white rounded-2xl p-8 text-center border border-gray-200 hover:shadow-lg transition-all duration-300 group">
-                            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-yellow-400 text-black mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                                 <FaShieldAlt className="text-3xl" />
                             </div>
                             <h3 className="text-xl font-bold text-black mb-4">
@@ -235,7 +235,7 @@ export default async function ProductDetailPage({
                         </div>
 
                         <div className="bg-white rounded-2xl p-8 text-center border border-gray-200 hover:shadow-lg transition-all duration-300 group">
-                            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-yellow-400 text-black mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary text-black mb-6 group-hover:scale-110 transition-transform duration-300">
                                 <FaHeadset className="text-3xl" />
                             </div>
                             <h3 className="text-xl font-bold text-black mb-4">
@@ -247,7 +247,7 @@ export default async function ProductDetailPage({
                         </div>
 
                         <div className="bg-white rounded-2xl p-8 text-center border border-gray-200 hover:shadow-lg transition-all duration-300 group">
-                            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-yellow-400 text-black mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                                 <FaDollarSign className="text-3xl" />
                             </div>
                             <h3 className="text-xl font-bold text-black mb-4">
@@ -268,7 +268,7 @@ export default async function ProductDetailPage({
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4">
                             Other Products
                         </h2>
-                        <div className="w-24 h-1 bg-yellow-400 mx-auto"></div>
+                        <div className="w-24 h-1 bg-primary mx-auto"></div>
                     </div>
                     <ProductSlider products={products.filter(p => p.id !== product.id)} />
                 </div>
@@ -286,7 +286,7 @@ export default async function ProductDetailPage({
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             href="/contact"
-                            className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold bg-yellow-400 text-black hover:bg-yellow-500 transition-colors duration-300"
+                            className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold bg-primary text-white hover:bg-primary/80 transition-colors duration-300"
                         >
                             Contact Us
                         </Link>

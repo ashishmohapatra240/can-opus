@@ -4,14 +4,14 @@ export default function ProductsHeroSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center">
                     {/* Badge */}
-                    <div className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black mb-8">
+                    <div className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white mb-8">
                         Our Products
                     </div>
                     
                     {/* Main Heading */}
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-black leading-tight mb-6">
                         <span className="block">Engineering Solutions</span>
-                        <span className="block text-black/30">for Every Industry</span>
+                        <span className="block text-secondary">for Every Industry</span>
                     </h1>
                     
                     {/* Description */}
