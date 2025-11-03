@@ -5,7 +5,7 @@ export default function ContactHeroSection() {
                 <div className="text-center max-w-4xl mx-auto">
                     {/* Contact Us Badge */}
                     <div className="flex justify-center mb-8">
-                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black">
+                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white">
                             Contact Us
                         </span>
                     </div>
@@ -13,7 +13,7 @@ export default function ContactHeroSection() {
                     {/* Main Heading */}
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-black leading-tight mb-6">
                         <span className="block">Let&apos;s Build Something</span>
-                        <span className="block text-black/30">Amazing Together</span>
+                        <span className="block text-secondary">Amazing Together</span>
                     </h1>
 
                     {/* Subtitle */}

@@ -34,13 +34,13 @@ export default function ContactInfoSection() {
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     <div className="flex justify-center mb-8">
-                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black">
+                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white">
                             Get in Touch
                         </span>
                     </div>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight mb-6">
                         <span className="block">Multiple ways to</span>
-                        <span className="block text-black/30">reach our team</span>
+                        <span className="block text-secondary">reach our team</span>
                     </h2>
                     <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
                         Choose the most convenient way to connect with us. Our team is ready to assist you with any questions or requirements.
