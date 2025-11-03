@@ -104,62 +104,62 @@ export const products: Product[] = [
       },
     ],
   },
-  {
-    id: 2,
-    slug: "emission-monitoring",
-    image: "/images/products/Emission Monitoring.png",
-    title: "Emission Monitoring",
-    description:
-      "Continuous Monitoring Systems (CMS) enable to track the SO2, CO, NOX, Ammonia, or PM2.5 & PM10 Particles in the Industrial Air. Find Total Mercury or both Elemental and Ionic Mercury Systems designed & installed by CanOpus.",
-    fullDescription:
-      "Our Continuous Monitoring Systems (CMS) provide real-time tracking of various pollutants and particles in industrial air. These advanced systems help ensure compliance with environmental regulations while maintaining optimal operational efficiency.",
-    heroDescription:
-      "Advanced Continuous Monitoring Systems (CMS) designed to track SO2, CO, NOX, Ammonia, and particulate matter in industrial environments.",
-    heroSubDescription:
-      "Our comprehensive emission monitoring solutions help you maintain compliance with environmental regulations while ensuring the safety of your facility and workforce. From mercury detection to multi-gas analysis, we provide accurate and reliable monitoring systems.",
-    features: [
-      "Real-time continuous monitoring",
-      "SO2, CO, NOX, and Ammonia tracking",
-      "PM2.5 & PM10 particle detection",
-      "Mercury measurement systems",
-      "Data logging and reporting",
-      "Remote monitoring capabilities",
-    ],
-    applications: [
-      "Power plants",
-      "Cement manufacturing",
-      "Steel plants",
-      "Chemical industries",
-      "Waste incineration",
-      "Oil and gas refineries",
-    ],
-    variants: [
-      {
-        title: "SO2 Monitoring Systems",
-        image: "/images/products/Emission Monitoring.png",
-      },
-      {
-        title: "NOX Analyzers",
-        image: "/images/products/Emission Monitoring.png",
-      },
-      {
-        title: "CO Emission Monitors",
-        image: "/images/products/Emission Monitoring.png",
-      },
-      {
-        title: "PM2.5 & PM10 Detectors",
-        image: "/images/products/Emission Monitoring.png",
-      },
-      {
-        title: "Mercury Monitoring Systems",
-        image: "/images/products/Emission Monitoring.png",
-      },
-      {
-        title: "Multi-Gas Analyzers",
-        image: "/images/products/Emission Monitoring.png",
-      },
-    ],
-  },
+  // {
+  //   id: 2,
+  //   slug: "emission-monitoring",
+  //   image: "/images/products/Emission Monitoring.png",
+  //   title: "Emission Monitoring",
+  //   description:
+  //     "Continuous Monitoring Systems (CMS) enable to track the SO2, CO, NOX, Ammonia, or PM2.5 & PM10 Particles in the Industrial Air. Find Total Mercury or both Elemental and Ionic Mercury Systems designed & installed by CanOpus.",
+  //   fullDescription:
+  //     "Our Continuous Monitoring Systems (CMS) provide real-time tracking of various pollutants and particles in industrial air. These advanced systems help ensure compliance with environmental regulations while maintaining optimal operational efficiency.",
+  //   heroDescription:
+  //     "Advanced Continuous Monitoring Systems (CMS) designed to track SO2, CO, NOX, Ammonia, and particulate matter in industrial environments.",
+  //   heroSubDescription:
+  //     "Our comprehensive emission monitoring solutions help you maintain compliance with environmental regulations while ensuring the safety of your facility and workforce. From mercury detection to multi-gas analysis, we provide accurate and reliable monitoring systems.",
+  //   features: [
+  //     "Real-time continuous monitoring",
+  //     "SO2, CO, NOX, and Ammonia tracking",
+  //     "PM2.5 & PM10 particle detection",
+  //     "Mercury measurement systems",
+  //     "Data logging and reporting",
+  //     "Remote monitoring capabilities",
+  //   ],
+  //   applications: [
+  //     "Power plants",
+  //     "Cement manufacturing",
+  //     "Steel plants",
+  //     "Chemical industries",
+  //     "Waste incineration",
+  //     "Oil and gas refineries",
+  //   ],
+  //   variants: [
+  //     {
+  //       title: "SO2 Monitoring Systems",
+  //       image: "/images/products/Emission Monitoring.png",
+  //     },
+  //     {
+  //       title: "NOX Analyzers",
+  //       image: "/images/products/Emission Monitoring.png",
+  //     },
+  //     {
+  //       title: "CO Emission Monitors",
+  //       image: "/images/products/Emission Monitoring.png",
+  //     },
+  //     {
+  //       title: "PM2.5 & PM10 Detectors",
+  //       image: "/images/products/Emission Monitoring.png",
+  //     },
+  //     {
+  //       title: "Mercury Monitoring Systems",
+  //       image: "/images/products/Emission Monitoring.png",
+  //     },
+  //     {
+  //       title: "Multi-Gas Analyzers",
+  //       image: "/images/products/Emission Monitoring.png",
+  //     },
+  //   ],
+  // },
   {
     id: 3,
     slug: "power-transmission-tech",
