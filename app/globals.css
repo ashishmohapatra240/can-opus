@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #3d9f77;
+  --color-secondary: #44537c;
+}
+
+/* CSS Custom Properties for direct usage */
+:root {
+  --primary-color: #3d9f77;
+  --secondary-color: #44537c;
+}
+
 /* Default font family */
 * {
   font-family: var(--font-instrument-sans), sans-serif;
