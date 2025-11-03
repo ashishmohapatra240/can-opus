@@ -8,13 +8,13 @@ export default function ValuesSection() {
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     <div className="flex justify-center mb-8">
-                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black">
+                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white">
                             Our Values
                         </span>
                     </div>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight mb-6">
                         <span className="block">Core principles that</span>
-                        <span className="block text-black/30">guide everything we do</span>
+                        <span className="block text-secondary">guide everything we do</span>
                     </h2>
                     <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
                         Our values shape our culture, drive our decisions, and define how we serve our clients and community.

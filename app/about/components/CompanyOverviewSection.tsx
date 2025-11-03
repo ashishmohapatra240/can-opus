@@ -7,7 +7,7 @@ export default function CompanyOverviewSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Company Overview Badge */}
                 <div className="flex mb-8">
-                    <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black">
+                    <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white">
                         Our Story
                     </span>
                 </div>
@@ -16,7 +16,7 @@ export default function CompanyOverviewSection() {
                 <div className="mb-12">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black leading-tight">
                         <span className="block">Trusted partner for over 20 years</span>
-                        <span className="block text-black/30">of industry excellence</span>
+                        <span className="block text-secondary">of industry excellence</span>
                     </h2>
                 </div>
 

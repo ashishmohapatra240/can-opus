@@ -44,13 +44,13 @@ export default function HistorySection() {
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     <div className="flex justify-center mb-8">
-                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-yellow-400 text-black">
+                        <span className="inline-flex px-4 py-2 rounded-full text-sm font-medium bg-primary text-white">
                             Our Journey
                         </span>
                     </div>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight mb-6">
                         <span className="block">Two decades of</span>
-                        <span className="block text-black/30">innovation and growth</span>
+                        <span className="block text-secondary">innovation and growth</span>
                     </h2>
                     <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
                         From a small engineering firm to a trusted industry leader, our journey reflects our commitment to excellence and innovation.
@@ -60,14 +60,14 @@ export default function HistorySection() {
                 {/* Timeline */}
                 <div className="relative">
                     {/* Vertical line */}
-                    <div className="absolute left-4 lg:left-1/2 transform lg:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-yellow-400"></div>
+                    <div className="absolute left-4 lg:left-1/2 transform lg:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-primary"></div>
 
                     {/* Timeline items */}
                     <div className="space-y-12">
                         {milestones.map((milestone, index) => (
                             <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                                 {/* Timeline dot */}
-                                <div className={`absolute left-4 lg:left-1/2 transform lg:-translate-x-1/2 w-4 h-4 rounded-full border-4 border-white ${milestone.highlight ? 'bg-yellow-500' : 'bg-gray-400'} z-10`}></div>
+                                <div className={`absolute left-4 lg:left-1/2 transform lg:-translate-x-1/2 w-4 h-4 rounded-full border-4 border-white ${milestone.highlight ? 'bg-primary/80' : 'bg-gray-400'} z-10`}></div>
 
                                 {/* Content */}
                                 <div className={`ml-12 lg:ml-0 lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'}`}>
