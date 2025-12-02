@@ -79,7 +79,7 @@ export default function ProductSlider({ products }: ProductSliderProps) {
             </button>
             <button
                 className="swiper-button-next-custom disabled:opacity-35 disabled:cursor-not-allowed absolute top-1/2 -right-4 lg:-right-12 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-primary hover:bg-primary/80 text-black flex items-center justify-center transition-all duration-300 shadow-lg group cursor-pointer"
-                aria-label="Next slide"
+            aria-label="Next slide"
             >
                 <svg 
                     className="w-6 h-6 transition-transform group-hover:translate-x-0.5" 

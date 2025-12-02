@@ -1,27 +1,31 @@
-import IndustryCard from './IndustryCard';
+import LinkedIndustryCard from './LinkedIndustryCard';
 
 export default function IndustriesSection() {
     const industries = [
         {
             id: 1,
+            slug: 'steel',
             image: '/images/industries/Steel Industry.png',
             title: 'Steel Industry',
             description: 'Aid for Production Targets, Low Cost Maintenance, Reuse the Dust, CanOpus Delivers it all.'
         },
         {
             id: 2,
+            slug: 'paper',
             image: '/images/industries/Paper Industry.png',
             title: 'Paper Industry',
             description: 'Analyze, plan, design, manage, and nurture the power transmission, anti-friction components running.'
         },
         {
             id: 3,
+            slug: 'power',
             image: '/images/industries/Power Industry.png',
             title: 'Power Industry',
             description: 'Gas or Coal, CanOpus Primes to deliver the efficiency for power generation.'
         },
         {
             id: 4,
+            slug: 'fertilizer',
             image: '/images/industries/Fertilizer Industry.png',
             title: 'Fertilizer Industry',
             description: 'Fertilizer needs lot powder chemicals and Gases in finding Quality production.'
@@ -52,11 +56,12 @@ export default function IndustriesSection() {
                 {/* Industries Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 md:px-24">
                     {industries.map((industry) => (
-                        <IndustryCard
+                        <LinkedIndustryCard
                             key={industry.id}
                             image={industry.image}
                             title={industry.title}
                             description={industry.description}
+                            slug={industry.slug}
                         />
                     ))}
                 </div>

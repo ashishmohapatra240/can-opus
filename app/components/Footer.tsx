@@ -61,7 +61,7 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12">
           <div className="flex-shrink-0">
             <Image
-              src="/images/canopus-logo.svg"
+              src="/images/logo.png"
               alt="Canopus Logo"
               width={200}
               height={60}
