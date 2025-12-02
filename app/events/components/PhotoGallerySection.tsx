@@ -1,10 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 
 export default function PhotoGallerySection() {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const photos = [
     {

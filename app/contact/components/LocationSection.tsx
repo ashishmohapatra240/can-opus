@@ -1,4 +1,4 @@
-import { RiMapPin2Line, RiDirectionLine, RiTimeLine } from 'react-icons/ri';
+import { RiMapPin2Line, RiTimeLine } from 'react-icons/ri';
 
 export default function LocationSection() {
     return (

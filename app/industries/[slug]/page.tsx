@@ -40,9 +40,9 @@ export default async function IndustryPage({ params }: PageProps) {
 
       <WhatWeDeliverSection values={industry.valueDelivered.map((value, index) => {
         const icons = [
-          <RiStockFill className="text-primary text-3xl" />,
-          <RiAlarmWarningFill className="text-primary text-3xl" />,
-          <RiAncientGateFill className="text-primary text-3xl" />
+          <RiStockFill key="stock" className="text-primary text-3xl" />,
+          <RiAlarmWarningFill key="alarm" className="text-primary text-3xl" />,
+          <RiAncientGateFill key="gate" className="text-primary text-3xl" />
         ];
         const icon = icons[index % icons.length];
         return {

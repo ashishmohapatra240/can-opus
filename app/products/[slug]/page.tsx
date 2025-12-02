@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getProductBySlug, getAllProductSlugs, products } from '../../data/products';
-import { FaCheckCircle, FaTools, FaShieldAlt, FaHeadset, FaDollarSign, FaDownload, FaEnvelope } from 'react-icons/fa';
+import { FaTools, FaShieldAlt, FaHeadset, FaDollarSign, FaDownload, FaEnvelope } from 'react-icons/fa';
 import ProductSlider from '../../components/ProductSlider';
 
 export async function generateStaticParams() {
