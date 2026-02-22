@@ -18,7 +18,7 @@ export default function AboutHeroSection() {
 
                     {/* Subtitle */}
                     <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                        For over 20 years, Canopus has been a trusted partner in delivering innovative engineering solutions that improve operational efficiency while reducing environmental impact.
+                        For over 10 years, Canopus has been a trusted partner in delivering innovative engineering solutions that improve operational efficiency while reducing environmental impact.
                     </p>
                 </div>
             </div>

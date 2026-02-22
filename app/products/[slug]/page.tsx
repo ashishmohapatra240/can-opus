@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getProductBySlug, getAllProductSlugs, products } from '../../data/products';
 import { FaTools, FaShieldAlt, FaHeadset, FaDollarSign, FaDownload, FaEnvelope } from 'react-icons/fa';
 import ProductSlider from '../../components/ProductSlider';
+import EnquireNowButton from '../../components/EnquireNowButton';
 
 export async function generateStaticParams() {
     const slugs = getAllProductSlugs();
@@ -115,13 +116,13 @@ export default async function ProductDetailPage({
                         ))}
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold bg-primary text-white hover:bg-primary/80 transition-colors duration-300 gap-2"
+                            <EnquireNowButton
+                                subject={product.title}
+                                className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold gap-2"
                             >
                                 <FaEnvelope className="text-lg" />
                                 Enquire Now
-                            </Link>
+                            </EnquireNowButton>
                             <button
                                 className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold bg-black text-white hover:bg-gray-800 transition-colors duration-300 gap-2 cursor-pointer"
                             >
@@ -160,13 +161,13 @@ export default async function ProductDetailPage({
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold bg-primary text-white hover:bg-primary/80 transition-colors duration-300 gap-2"
+                            <EnquireNowButton
+                                subject={product.title}
+                                className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold gap-2"
                             >
                                 <FaEnvelope className="text-lg" />
                                 Enquire Now
-                            </Link>
+                            </EnquireNowButton>
                             <button
                                 className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold bg-black text-white hover:bg-gray-800 transition-colors duration-300 gap-2 cursor-pointer"
                             >
@@ -284,12 +285,10 @@ export default async function ProductDetailPage({
                         Get in touch with our team to learn more about how our products can benefit your operations and create a safer working environment.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold bg-primary text-white hover:bg-primary/80 transition-colors duration-300"
-                        >
-                            Contact Us
-                        </Link>
+                        <EnquireNowButton
+                            subject={product.title}
+                            className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold"
+                        />
                         <Link
                             href="/products"
                             className="inline-flex items-center justify-center px-8 py-4 rounded-full text-md font-semibold bg-white text-black hover:bg-gray-100 transition-colors duration-300"

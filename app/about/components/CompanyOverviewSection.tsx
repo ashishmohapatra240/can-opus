@@ -15,7 +15,7 @@ export default function CompanyOverviewSection() {
                 {/* Main Heading */}
                 <div className="mb-12">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black leading-tight">
-                        <span className="block">Trusted partner for over 20 years</span>
+                        <span className="block">Trusted partner for over 10 years</span>
                         <span className="block text-secondary">of industry excellence</span>
                     </h2>
                 </div>
@@ -45,7 +45,7 @@ export default function CompanyOverviewSection() {
                     <FeatureCard
                         icon={<RiTrophyLine className="w-8 h-8 lg:w-10 lg:h-10 text-gray-700" />}
                         title="Industry Leadership"
-                        description="Two decades of proven expertise and innovation in engineering solutions."
+                        description="Over a decade of proven expertise and innovation in engineering solutions."
                     />
 
                     <FeatureCard

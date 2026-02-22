@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Instrument_Sans } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import MapSection from "./components/MapSection";
+import EnquiryFormModal from "./components/EnquiryFormModal";
+import { EnquiryModalProvider } from "./context/EnquiryModalContext";
 import "./globals.css";
 
 const instrumentSans = Instrument_Sans({
@@ -24,9 +27,13 @@ export default function RootLayout({
       <body
         className={`${instrumentSans.variable} antialiased`}
       >
-        <Header/>
-        {children}
-        <Footer/>
+        <EnquiryModalProvider>
+          <Header />
+          {children}
+          <MapSection />
+          <Footer />
+          <EnquiryFormModal />
+        </EnquiryModalProvider>
       </body>
     </html>
   );

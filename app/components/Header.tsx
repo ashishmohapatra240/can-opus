@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { useEnquiryModal } from '../context/EnquiryModalContext';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,6 +21,7 @@ export default function Header() {
   const isEventsPage = pathname === '/events';
   const isPartneringPage = pathname === '/partnering';
   const isContactPage = pathname === '/contact';
+  const { openEnquiryModal } = useEnquiryModal();
 
   return (
     <header className="sticky top-0 w-full z-50 bg-white border-b border-gray-100 shadow-xs">
@@ -76,8 +78,12 @@ export default function Header() {
           </div>
 
           <div className="hidden lg:flex items-center">
-            <button className="bg-primary hover:bg-primary/80 text-white font-semibold px-4 py-2 rounded-full transition-colors text-sm font-sans cursor-pointer">
-              Let&apos;s Connect
+            <button
+              type="button"
+              onClick={() => openEnquiryModal()}
+              className="bg-primary hover:bg-primary/80 text-white font-semibold px-4 py-2 rounded-full transition-colors text-sm font-sans cursor-pointer"
+            >
+              Enquire Now
             </button>
           </div>
 
@@ -156,10 +162,11 @@ export default function Header() {
               {/* Mobile CTA Button */}
               <div className="px-3 py-3">
                 <button
+                  type="button"
                   className="w-full bg-primary hover:bg-primary/80 text-white font-semibold px-4 py-3 rounded-full transition-colors text-base font-sans"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => { openEnquiryModal(); setIsMobileMenuOpen(false); }}
                 >
-                  Let&apos;s Connect
+                  Enquire Now
                 </button>
               </div>
             </div>

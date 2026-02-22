@@ -15,7 +15,7 @@ export default function AboutSection() {
                 {/* Main Heading */}
                 <div className="mb-5">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black leading-tight">
-                        <span className="block">Trusted partner for over 20 years</span>
+                        <span className="block">Trusted partner for over 10 years</span>
                         <span className="block text-secondary">of industry excellence</span>
                     </h2>
                 </div>

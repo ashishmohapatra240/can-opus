@@ -1,170 +1,24 @@
 'use client';
 
-import { useState, useEffect, useRef, useMemo } from 'react';
-import { gsap } from 'gsap';
+import { useState, useRef, useEffect } from 'react';
+import { useEnquiryModal } from '../context/EnquiryModalContext';
 
 export default function HeroSection() {
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [hasError, setHasError] = useState(false);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const video1Ref = useRef<HTMLVideoElement>(null);
-  const video2Ref = useRef<HTMLVideoElement>(null);
-  const container1Ref = useRef<HTMLDivElement>(null);
-  const container2Ref = useRef<HTMLDivElement>(null);
-  const [activeVideo, setActiveVideo] = useState<'video1' | 'video2'>('video1');
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const { openEnquiryModal } = useEnquiryModal();
 
-  const videos = useMemo(() => [
-    '/video/hero-1.mp4',
-    '/video/hero-2.mp4',
-    '/video/hero-3.mp4'
-  ], []);
-
-    // Initialize GSAP and videos
   useEffect(() => {
-    const video1 = video1Ref.current;
-    const video2 = video2Ref.current;
-    const container1 = container1Ref.current;
-    const container2 = container2Ref.current;
-    
-    if (video1 && video2 && container1 && container2) {
-      setHasError(false);
-      
-      // Set initial GSAP states
-      gsap.set(container1, { opacity: 1, zIndex: 10 });
-      gsap.set(container2, { opacity: 0, zIndex: 5 });
-      
-      // Load both videos
-      video1.load();
-      video2.load();
+    const video = videoRef.current;
+    if (video) {
+      video.load();
     }
   }, []);
-
-    // GSAP-powered smooth video transitions
-  useEffect(() => {
-    const currentVideoEl = activeVideo === 'video1' ? video1Ref.current : video2Ref.current;
-    const nextVideoEl = activeVideo === 'video1' ? video2Ref.current : video1Ref.current;
-    const currentContainer = activeVideo === 'video1' ? container1Ref.current : container2Ref.current;
-    const nextContainer = activeVideo === 'video1' ? container2Ref.current : container1Ref.current;
-    
-    if (!currentVideoEl || !nextVideoEl || !currentContainer || !nextContainer) return;
-
-    const handleTimeUpdate = () => {
-      if (isTransitioning) return;
-      
-      // Start transition 1.5 seconds before end
-      const timeLeft = currentVideoEl.duration - currentVideoEl.currentTime;
-      if (timeLeft <= 1.5 && timeLeft > 0) {
-        setIsTransitioning(true);
-        
-        // Prepare next video
-        if (nextVideoEl.readyState >= 2) {
-          nextVideoEl.currentTime = 0;
-          const playPromise = nextVideoEl.play();
-          
-          if (playPromise !== undefined) {
-            playPromise.then(() => {
-              // Create smooth GSAP transition
-              const tl = gsap.timeline({
-                onComplete: () => {
-                  setActiveVideo(activeVideo === 'video1' ? 'video2' : 'video1');
-                  setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
-                  setIsTransitioning(false);
-                  
-                  // Reset the now-hidden video
-                  currentVideoEl.pause();
-                  currentVideoEl.currentTime = 0;
-                }
-              });
-              
-              // Smooth crossfade transition
-              tl.to(nextContainer, { 
-                opacity: 1, 
-                zIndex: 10, 
-                duration: 0.5, 
-                ease: "power2.inOut" 
-              })
-              .to(currentContainer, { 
-                opacity: 0, 
-                zIndex: 5, 
-                duration: 0.5, 
-                ease: "power2.inOut" 
-              }, "-=0.5"); // Start at the same time as the first animation
-              
-            }).catch((error) => {
-              console.log('Next video play failed:', error);
-              setIsTransitioning(false);
-            });
-          }
-        } else {
-          nextVideoEl.load();
-          setIsTransitioning(false);
-        }
-      }
-    };
-
-    const handleVideoEnd = () => {
-      if (!isTransitioning) {
-        // Immediate fallback transition
-        setActiveVideo(activeVideo === 'video1' ? 'video2' : 'video1');
-        setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
-      }
-    };
-
-    currentVideoEl.addEventListener('timeupdate', handleTimeUpdate);
-    currentVideoEl.addEventListener('ended', handleVideoEnd);
-
-    return () => {
-      currentVideoEl.removeEventListener('timeupdate', handleTimeUpdate);
-      currentVideoEl.removeEventListener('ended', handleVideoEnd);
-    };
-  }, [activeVideo, videos.length, isTransitioning]);
-
-  // Simplified video source management
-  useEffect(() => {
-    const video1 = video1Ref.current;
-    const video2 = video2Ref.current;
-    if (!video1 || !video2) return;
-
-    setHasError(false);
-
-    // Update video sources
-    const currentSrc = videos[currentVideoIndex];
-    const nextSrc = videos[(currentVideoIndex + 1) % videos.length];
-
-    // Set sources for both videos
-    const video1Source = video1.querySelector('source');
-    const video2Source = video2.querySelector('source');
-
-    if (activeVideo === 'video1') {
-      // Video1 is active, Video2 is next
-      if (video1Source && video1Source.src !== currentSrc) {
-        video1Source.src = currentSrc;
-        video1.load();
-        video1.play().catch(() => setHasError(true));
-      }
-      if (video2Source && video2Source.src !== nextSrc) {
-        video2Source.src = nextSrc;
-        video2.load();
-      }
-    } else {
-      // Video2 is active, Video1 is next
-      if (video2Source && video2Source.src !== currentSrc) {
-        video2Source.src = currentSrc;
-        video2.load();
-        video2.play().catch(() => setHasError(true));
-      }
-      if (video1Source && video1Source.src !== nextSrc) {
-        video1Source.src = nextSrc;
-        video1.load();
-      }
-    }
-  }, [currentVideoIndex, activeVideo, videos]);
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full">
-
 
         {/* Error overlay */}
         {hasError && (
@@ -175,46 +29,25 @@ export default function HeroSection() {
           </div>
         )}
 
-        {/* Video Container 1 */}
-        <div 
-          ref={container1Ref}
-          className="absolute inset-0 w-full h-full"
-        >
+        {/* Video */}
+        <div className="absolute inset-0 w-full h-full">
           <video
-            ref={video1Ref}
+            ref={videoRef}
             className="w-full h-full object-cover"
             autoPlay
             muted
+            loop
             playsInline
             preload="auto"
-            crossOrigin="anonymous"
+            onError={() => setHasError(true)}
           >
-            <source src={videos[currentVideoIndex]} type="video/mp4" />
+            <source src="/video/hero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
 
-        {/* Video Container 2 */}
-        <div 
-          ref={container2Ref}
-          className="absolute inset-0 w-full h-full"
-        >
-          <video
-            ref={video2Ref}
-            className="w-full h-full object-cover"
-            autoPlay
-            muted
-            playsInline
-            preload="auto"
-            crossOrigin="anonymous"
-          >
-            <source src={videos[(currentVideoIndex + 1) % videos.length]} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-secondary"></div>
+        {/* Dark overlay - semi-transparent so video shows through */}
+        <div className="absolute inset-0 bg-black/70"></div>
       </div>
 
       {/* Content */}
@@ -240,8 +73,12 @@ export default function HeroSection() {
 
             {/* CTA Button */}
             <div className="flex items-center">
-              <button className="group bg-primary hover:bg-primary/80 text-white font-semibold px-4 py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 flex items-center space-x-2 text-sm lg:text-base font-sans cursor-pointer">
-                <span>Get in touch</span>
+              <button
+                type="button"
+                onClick={() => openEnquiryModal()}
+                className="group bg-primary hover:bg-primary/80 text-white font-semibold px-4 py-2 lg:px-6 lg:py-3 rounded-full transition-all duration-300 flex items-center space-x-2 text-sm lg:text-base font-sans cursor-pointer"
+              >
+                <span>Enquire Now</span>
                 <svg
                   className="w-4 h-4 lg:w-5 lg:h-5 transform group-hover:translate-x-2 transition-transform duration-300"
                   fill="none"

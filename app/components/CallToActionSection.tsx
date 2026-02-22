@@ -1,4 +1,10 @@
+'use client';
+
+import { useEnquiryModal } from '../context/EnquiryModalContext';
+
 export default function CallToActionSection() {
+    const { openEnquiryModal } = useEnquiryModal();
+
     return (
         <section className="relative py-16 lg:py-24 bg-black rounded-3xl mx-4 sm:mx-6 lg:mx-8 my-8 lg:my-12 overflow-hidden">
             {/* Background decorative shapes */}
@@ -22,8 +28,12 @@ export default function CallToActionSection() {
 
                 {/* Call-to-Action Button */}
                 <div className="flex justify-center">
-                    <button className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold bg-primary text-white hover:bg-primary/80 transition-colors duration-300 cursor-pointer">
-                        Join Us
+                    <button
+                        type="button"
+                        onClick={() => openEnquiryModal()}
+                        className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold bg-primary text-white hover:bg-primary/80 transition-colors duration-300 cursor-pointer"
+                    >
+                        Enquire Now
                     </button>
                 </div>
             </div>

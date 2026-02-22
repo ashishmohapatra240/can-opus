@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import EnquireNowButton from '../../components/EnquireNowButton';
 
 interface IndustryHeroSectionProps {
   title: string;
@@ -31,9 +32,10 @@ export default function IndustryHeroSection({ title, description, image }: Indus
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="inline-flex items-center justify-center px-6 py-2 rounded-full text-md font-semibold bg-primary text-white hover:bg-primary/80 transition-colors duration-300 cursor-pointer whitespace-nowrap">
-                Request Consultation
-              </button>
+              <EnquireNowButton
+                className="inline-flex items-center justify-center px-6 py-2 rounded-full text-md font-semibold whitespace-nowrap"
+                variant="primary"
+              />
               <button className="inline-flex items-center justify-center px-6 py-2 rounded-full text-md font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 cursor-pointer whitespace-nowrap">
                 Download Industry Profile (PDF)
               </button>

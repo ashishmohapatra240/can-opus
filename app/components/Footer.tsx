@@ -67,7 +67,7 @@ export default function Footer() {
               height={60}
             />
             <p className="text-gray-600 text-sm mt-4 max-w-md leading-relaxed">
-              CanOpus Group is led by a Professionally managed Teams with more than 20+ years of Industry Experience. With a continued focus on Innovation, High-Quality Service and dedicated Customer Support, the company has consistently gained the Trust and Reliability of its Partners and Associates.
+              CanOpus Group is led by professionally managed teams with more than 10+ years of industry experience. With a continued focus on Innovation, High-Quality Service and dedicated Customer Support, the company has consistently gained the Trust and Reliability of its Partners and Associates.
             </p>
           </div>
 

@@ -1,40 +1,76 @@
 export default function HistorySection() {
     const milestones = [
         {
-            year: "2004",
-            title: "Company Founded",
-            description: "Canopus was established with a vision to provide innovative engineering solutions to industrial clients.",
-            highlight: false
-        },
-        {
-            year: "2008",
-            title: "First Major Partnership",
-            description: "Secured partnerships with leading manufacturers in filtration and monitoring equipment.",
-            highlight: false
-        },
-        {
-            year: "2012",
-            title: "Expansion into Power Sector",
-            description: "Extended our expertise to power generation and transmission technologies.",
+            year: "2014",
+            title: "Foundation Year",
+            description: "Company established with a focus on Hydraulic Oil Filters. Built strong relationships with initial customers and partners.",
             highlight: true
         },
         {
+            year: "2015",
+            title: "Market Penetration",
+            description: "Expanded client base across industrial sectors. Strengthened supply chain and technical support systems.",
+            highlight: false
+        },
+        {
             year: "2016",
-            title: "Environmental Focus",
-            description: "Launched dedicated environmental solutions division.",
+            title: "Operational Strength",
+            description: "Improved internal processes and quality standards. Built a dedicated professional team.",
+            highlight: false
+        },
+        {
+            year: "2017",
+            title: "Dust Collection Systems Expansion",
+            description: "Introduced Dust Collection & Dust Extraction Systems. Delivered customized engineered solutions.",
+            highlight: true
+        },
+        {
+            year: "2018",
+            title: "Industrial Solution Provider",
+            description: "Expanded project-based solutions across industries. Enhanced after-sales service and customer support.",
+            highlight: false
+        },
+        {
+            year: "2019",
+            title: "People & Services Growth",
+            description: "Expanded service portfolio. Strengthened on-site technical support team.",
             highlight: false
         },
         {
             year: "2020",
-            title: "Digital Transformation",
-            description: "Integrated IoT and digital monitoring solutions into our service offerings.",
+            title: "Technology Integration",
+            description: "Focused on advanced engineering applications. Improved operational efficiency and safety standards.",
+            highlight: false
+        },
+        {
+            year: "2021",
+            title: "Reliability & Trust",
+            description: "Strengthened reputation for dependable engineering solutions. Expanded partnerships and repeat business.",
+            highlight: false
+        },
+        {
+            year: "2022",
+            title: "Bearing & Mechanical Solutions",
+            description: "Entered bearing and mechanical reliability solutions. Enhanced industrial maintenance capabilities.",
             highlight: true
         },
         {
-            year: "2024",
-            title: "Sustainable Future",
-            description: "Leading the industry in sustainable engineering solutions with reduced carbon footprint technologies.",
+            year: "2023",
+            title: "Advanced Engineering Services",
+            description: "Expanded into Condition-Based Maintenance (CBM). Increased automation-driven support solutions.",
             highlight: false
+        },
+        {
+            year: "2024",
+            title: "Smart Monitoring Solutions",
+            description: "Introduced advanced monitoring systems. Strengthened predictive maintenance offerings.",
+            highlight: false
+        },
+        {
+            year: "2025",
+            title: "CBM & Sensor Technology Era",
+            description: "Integrated CBM Technology & Smart Sensor Solutions. Celebrating 10 Years of Engineering Excellence.",
+            highlight: true
         }
     ];
 
@@ -49,11 +85,11 @@ export default function HistorySection() {
                         </span>
                     </div>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight mb-6">
-                        <span className="block">Two decades of</span>
-                        <span className="block text-secondary">innovation and growth</span>
+                        <span className="block">Year-wise achievements</span>
+                        <span className="block text-secondary">2014–2025</span>
                     </h2>
                     <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                        From a small engineering firm to a trusted industry leader, our journey reflects our commitment to excellence and innovation.
+                        From hydraulic oil filters to complete engineering solutions—delivered across industries, grown through trust and partnerships, and driven by cutting-edge technology for industrial excellence.
                     </p>
                 </div>
 
