@@ -8,7 +8,7 @@ interface IndustryCardProps {
 
 export default function IndustryCard({ image, title, description }: IndustryCardProps) {
     return (
-        <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-sm transition-shadow duration-300">
+        <div className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-sm transition-shadow duration-300">
             {/* Industry Image */}
             <div className="aspect-[4/3] relative bg-gray-100">
                 <Image
@@ -16,16 +16,16 @@ export default function IndustryCard({ image, title, description }: IndustryCard
                     alt={title}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
             </div>
 
-            {/* Industry Info */}
-            <div className="p-6 lg:p-8">
-                <h3 className="text-xl lg:text-2xl font-bold text-black mb-3">
+            {/* Industry Info - compact for 4-across layout */}
+            <div className="p-4 lg:p-5">
+                <h3 className="text-lg font-bold text-black mb-2">
                     {title}
                 </h3>
-                <p className="text-gray-600 text-sm lg:text-base leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
                     {description}
                 </p>
             </div>

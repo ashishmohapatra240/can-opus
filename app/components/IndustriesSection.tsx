@@ -53,8 +53,8 @@ export default function IndustriesSection() {
                     </div>
                 </div>
 
-                {/* Industries Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 md:px-24">
+                {/* Industries Grid - 4 cards per row on large screens */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
                     {industries.map((industry) => (
                         <LinkedIndustryCard
                             key={industry.id}

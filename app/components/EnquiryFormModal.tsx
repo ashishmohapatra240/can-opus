@@ -9,25 +9,13 @@ import {
 } from 'react-icons/ri';
 import { useEnquiryModal } from '../context/EnquiryModalContext';
 
-const services = [
-  'Condition Monitoring Equipment',
-  'Flow & Level Instruments',
-  'Gas Phase Filtration',
-  'Gas Turbine Filtration',
-  'Industrial Dust, Fume and Mist',
-  'Power Transmission Technology',
-  'Screw Pumps',
-  'Other',
-];
-
+/** Form fields as per CanOpus_Enquiry_Form.docx: 1. Full Name, 2. Email Address, 3. Phone Number, 4. Enquiry For, 5. Message */
 const initialFormData = {
   name: '',
   email: '',
-  company: '',
   phone: '',
-  subject: '',
+  enquiryFor: '',
   message: '',
-  service: '',
 };
 
 export default function EnquiryFormModal() {
@@ -38,7 +26,7 @@ export default function EnquiryFormModal() {
 
   useEffect(() => {
     if (isOpen && presetSubject) {
-      setFormData((prev) => ({ ...prev, subject: presetSubject }));
+      setFormData((prev) => ({ ...prev, enquiryFor: presetSubject }));
     }
     if (!isOpen) {
       setFormData(initialFormData);
@@ -47,7 +35,7 @@ export default function EnquiryFormModal() {
   }, [isOpen, presetSubject]);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -84,7 +72,7 @@ export default function EnquiryFormModal() {
       {/* Modal */}
       <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-xl border border-gray-200">
         <div className="sticky top-0 bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between rounded-t-2xl z-10">
-          <h2 className="text-xl font-bold text-gray-900">Enquire Now</h2>
+          <h2 className="text-xl font-bold text-gray-900">Enquiry Form</h2>
           <button
             type="button"
             onClick={closeEnquiryModal}
@@ -122,104 +110,75 @@ export default function EnquiryFormModal() {
 
           {submitStatus !== 'success' && (
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="enq-name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="enq-name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none"
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="enq-email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="enq-email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="enq-company" className="block text-sm font-medium text-gray-700 mb-1">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="enq-company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none"
-                    placeholder="Your company name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="enq-phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="enq-phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none"
-                    placeholder="+91 9876543210"
-                  />
-                </div>
-              </div>
-
+              {/* 1. Full Name */}
               <div>
-                <label htmlFor="enq-service" className="block text-sm font-medium text-gray-700 mb-1">
-                  Service Interest
-                </label>
-                <select
-                  id="enq-service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none"
-                >
-                  <option value="">Select a service</option>
-                  {services.map((s, i) => (
-                    <option key={i} value={s}>{s}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="enq-subject" className="block text-sm font-medium text-gray-700 mb-1">
-                  Subject *
+                <label htmlFor="enq-name" className="block text-sm font-medium text-gray-700 mb-1">
+                  Full Name *
                 </label>
                 <input
                   type="text"
-                  id="enq-subject"
-                  name="subject"
-                  value={formData.subject}
+                  id="enq-name"
+                  name="name"
+                  value={formData.name}
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none"
-                  placeholder="Brief subject of your inquiry"
+                  placeholder="Your full name"
                 />
               </div>
 
+              {/* 2. Email Address */}
+              <div>
+                <label htmlFor="enq-email" className="block text-sm font-medium text-gray-700 mb-1">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="enq-email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              {/* 3. Phone Number */}
+              <div>
+                <label htmlFor="enq-phone" className="block text-sm font-medium text-gray-700 mb-1">
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  id="enq-phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none"
+                  placeholder="+91 9876543210"
+                />
+              </div>
+
+              {/* 4. Enquiry For */}
+              <div>
+                <label htmlFor="enq-enquiryFor" className="block text-sm font-medium text-gray-700 mb-1">
+                  Enquiry For *
+                </label>
+                <input
+                  type="text"
+                  id="enq-enquiryFor"
+                  name="enquiryFor"
+                  value={formData.enquiryFor}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none"
+                  placeholder="e.g. product name, service, or topic"
+                />
+              </div>
+
+              {/* 5. Message */}
               <div>
                 <label htmlFor="enq-message" className="block text-sm font-medium text-gray-700 mb-1">
                   Message *
@@ -232,7 +191,7 @@ export default function EnquiryFormModal() {
                   required
                   rows={4}
                   className="w-full px-4 py-2.5 border border-gray-300 rounded-xl focus:outline-none resize-y"
-                  placeholder="Tell us about your requirements..."
+                  placeholder="Your message..."
                 />
               </div>
 
